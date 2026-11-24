@@ -5,3 +5,17 @@ COPY target/*.war /usr/local/tomcat/webapps/ROOT.war
 EXPOSE 8080
 
 CMD ["catalina.sh", "run"]
+
+
+sudo apt update
+sudo apt-get install docker.io
+sudo apt install git 
+sudo apt install nano
+git clone 
+nano Dockerfile
+sudo docker build -t maven_web .
+sudo docker images
+sudo docker run -d --name ec2-demo -p 6060:8080 maven_web
+sudo docker login
+sudo docker tag ec2-maven-web:latest kanthimeenasri/maven-web
+sudo docker push kanthimeenasri/maven-web
